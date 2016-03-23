@@ -18,7 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
  * Handles requests for the application home page.
  */
 @Controller
-public class HomeController {
+public class UserController {
 	
 	@Autowired
 	private UserDAO userDao;
