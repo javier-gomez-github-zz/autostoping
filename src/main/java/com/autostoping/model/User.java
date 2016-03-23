@@ -6,14 +6,10 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@SequenceGenerator(name = "custSequenceGenerator", sequenceName = "DEMO_CUST_SEQ")
 @Table(name = "USERS")
 public class User {
     private int id;
@@ -22,7 +18,6 @@ public class User {
     private String email;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "custSequenceGenerator")
     @Column(name = "USER_ID")
     public int getId() {
         return id;
