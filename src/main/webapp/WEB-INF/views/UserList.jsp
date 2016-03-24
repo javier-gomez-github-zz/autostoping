@@ -15,6 +15,7 @@
 	        
         	<table border="1">
 	        	<th>No</th>
+				<th>Display Name</th>
 	        	<th>Username</th>
 	        	<th>Email</th>
 	        	<th>Actions</th>
@@ -22,12 +23,13 @@
 				<c:forEach var="user" items="${userList}" varStatus="status">
 	        	<tr>
 	        		<td>${status.index + 1}</td>
+					<td>${user.displayname}</td>
 					<td>${user.username}</td>
 					<td>${user.email}</td>
 					<td>
-						<a href="edit?id=${user.id}">Edit</a>
+						<a href="edit?user_id=${user.user_id}">Edit</a>
 						&nbsp;&nbsp;&nbsp;&nbsp;
-						<a href="delete?id=${user.id}">Delete</a>
+						<a href="delete?user_id=${user.user_id}">Delete</a>
 					</td>
 	        	</tr>
 				</c:forEach>	        	

@@ -40,7 +40,7 @@ public class UserController {
 	
 	@RequestMapping(value = "/edit", method = RequestMethod.GET)
 	public ModelAndView editUser(HttpServletRequest request) {
-		int userId = Integer.parseInt(request.getParameter("id"));
+		int userId = Integer.parseInt(request.getParameter("user_id"));
 		User user = userDao.get(userId);
 		ModelAndView model = new ModelAndView("UserForm");
 		model.addObject("user", user);

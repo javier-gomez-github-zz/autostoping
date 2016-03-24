@@ -12,7 +12,11 @@
 		<h1>New/Edit User</h1>
 		<table>
 			<form:form action="save" method="post" modelAttribute="user">
-			<form:hidden path="id"/>
+			<form:hidden path="user_id"/>
+			<tr>
+				<td>Full Name:</td>
+				<td><form:input path="displayname"/></td>
+			</tr>
 			<tr>
 				<td>Username:</td>
 				<td><form:input path="username"/></td>

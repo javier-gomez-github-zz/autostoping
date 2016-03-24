@@ -40,13 +40,13 @@ public class UserDAOImpl implements UserDAO {
 	@Transactional
 	public void delete(int id) {
 		User userToDelete = new User();
-		userToDelete.setId(id);
+		userToDelete.setUser_id(id);
 		sessionFactory.getCurrentSession().delete(userToDelete);
 	}
 
 	@Transactional
 	public User get(int id) {
-		String hql = "from User where id=" + id;
+		String hql = "from User where user_id=" + id;
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		
 		@SuppressWarnings("unchecked")
